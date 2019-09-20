@@ -1,0 +1,26 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+  Random random = new Random();
+  int numm = random.Next(1, 100); 
+  Console.WriteLine ("gissa ett tal från 1-100");
+  int försök = 0;
+
+    while(true){
+      int guess = int.Parse(Console.ReadLine());
+      försök++;
+      
+      if(guess < numm)
+        Console.WriteLine("gå högre");
+      
+      else if(guess > numm)
+        Console.WriteLine("gå lägre");
+      
+      else{
+        Console.WriteLine("Du gissade rätt på " + försök + " försök");
+        break;
+      }
+    }
+  }
+}
